@@ -30,14 +30,13 @@ export default function Navbar() {
 
     return (
         <nav>
-            {(toggleMenu || largeur > 500 && (
+            {(toggleMenu || largeur > 500) && (
                 <ul className="liste">
                     <li className="items">Accueil</li>
-                    <li className="items">Service</li>
+                    <li className="items">Ecrire</li>
                     <li className="items">Contact</li>
                 </ul>
-
-            ))}
+            )}
             <button onClick={toggleNav} className="btn">CLIQUE ICI</button>
 
         </nav>

@@ -14,10 +14,12 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
+    font-size: 22px;
 }
 
 .items {
-    margin-right: 10px;
+    margin: 0 15px;
+    text-transform: uppercase;
     color: #f1f1f1;
     cursor: pointer;
 }
@@ -35,19 +37,19 @@ nav {
 @media screen and (max-width: 500px) {
     .liste {
         flex-direction: column;
-        height: 200px;
+        height: auto;
     }
 
     .items:nth-child(1) {
-        border-top: 1px solid #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.6);
         margin-top: 50px;
     }
 
     .items {
-        height: 50px;
+        height: 70px;
         width: 100%;
-        border-bottom: 1px solid #fff;
-        line-height: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.6);
+        line-height: 70px;
         text-align: center;
     }
 
