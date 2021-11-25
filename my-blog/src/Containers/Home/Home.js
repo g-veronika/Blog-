@@ -10,18 +10,6 @@ export default function Home() {
                 <Card>
                     <h2>Hello Card</h2>
                 </Card>
-                <Card>
-                    <h2>Hello Card</h2>
-                </Card>
-                <Card>
-                    <h2>Hello Card</h2>
-                </Card>
-                <Card>
-                    <h2>Hello Card</h2>
-                </Card>
-                <Card>
-                    <h2>Hello Card</h2>
-                </Card>
             </div>
         </>
     )
