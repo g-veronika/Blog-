@@ -3,12 +3,16 @@ nav {
     top: 0;
     width: 100%;
     height: 50px;
-    background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+    background: #114357;  
+    background: -webkit-linear-gradient(to right, #F29492, #114357); 
+    background: linear-gradient(to right, #F29492, #114357); 
 }
 
 .liste {
     list-style-type: none;
-    background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+    background: #114357; 
+    background: -webkit-linear-gradient(to right, #F29492, #114357);  
+    background: linear-gradient(to right, #F29492, #114357); 
     height: 100%;
     display: flex;
     justify-content: center;
