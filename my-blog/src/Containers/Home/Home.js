@@ -1,10 +1,11 @@
 import React from 'react';
 import './Home.css';
-import Card from '../../Components/Card/Card'
+import Card from '../../Components/Card/Card';
 import { useSelector, useDispatch, } from 'react-redux'; 
 import { useState, useEffect } from 'react';
 import { getArticles } from '../../redux/articles/articleReducer';
 import {v4 as uuidv4} from 'uuid';
+import {Link} from 'react-router-dom';
 
 export default function Home() {
 
@@ -28,7 +29,13 @@ export default function Home() {
                     return (
                         <Card key={uuidv4()}>
                             <h2>{item.title}</h2>
-                            <a href="#">Lire l'article</a>
+
+                        <Link to={{
+                            pathname: `articles/${item.title.replace(/\s+/g, "-").trim()}`
+                        }}>
+                            Lire l'article
+                        </Link>
+
                         </Card>
                     )
                 })}
