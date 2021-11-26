@@ -7,22 +7,32 @@ export default function Form() {
     const [article, setArticle] = useState({
         title: "",
         body: ""
-    })
+    });
 
     const dispatch = useDispatch();  
 
 
-    const handleForm = e => {
+    const handleForm = (e) => {
         e.preventDefault();
-    }
 
-    const handleInput = e => {
+        dispatch({
+            type: "ADDARTICLE",
+            payload: article    
+        })
 
-        if(e.target.classList.contains("int-title")) {
+        setArticle({
+            title: "",
+            body: ""
+        })
+    };
+
+    const handleInput = (e) => {
+
+        if(e.target.classList.contains("inp-title")) {
             const newObjState = {...article, title: e.target.value};
             setArticle(newObjState);
         }
-        else if(e.target.classList.contains("int-body")) {
+        else if(e.target.classList.contains("inp-body")) {
             const newObjState = {...article, body: e.target.value};
             setArticle(newObjState);
         }
