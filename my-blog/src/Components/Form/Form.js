@@ -18,7 +18,14 @@ export default function Form() {
 
     const handleInput = e => {
 
-        console.log("HELLO")
+        if(e.target.classList.contains("int-title")) {
+            const newObjState = {...article, title: e.target.value};
+            setArticle(newObjState);
+        }
+        else if(e.target.classList.contains("int-body")) {
+            const newObjState = {...article, body: e.target.value};
+            setArticle(newObjState);
+        }
 
     }
 
@@ -34,14 +41,18 @@ export default function Form() {
                 value={article.title}
                 type="text" 
                 id="title" 
-                placeholder="Entrez votre nom"/>
+                placeholder="Entrez votre nom"
+                className="inp-title"
+                />
 
                 <label htmlFor="article">Votre article</label>
                 <textarea 
                 onChange={handleInput}
                 value={article.body}
                 id="article" 
-                placeholder="Votre article"></textarea>
+                placeholder="Votre article"
+                className="inp-body"
+                ></textarea>
 
                 <button>Envoyez l'article</button>
 
