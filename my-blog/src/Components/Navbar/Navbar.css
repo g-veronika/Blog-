@@ -26,6 +26,13 @@ nav {
     text-transform: uppercase;
     color: #f1f1f1;
     cursor: pointer;
+    
+}
+
+.items a {
+    color: #f1f1f1;
+    text-decoration: none;
+
 }
 
 .btn {
